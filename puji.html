@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="puji.js"></script>
+    </head>
+    <body>
+
+        <img id="image" width=200 height=200>
+        <input type="file" id="addImage" onchange="cebong.loadImage(event)" />
+        <textarea id="keterangan"></textarea>
+        <button id="btnsave">Simpan</button>
+        <h2>HSIL</h2>
+        Output: &nbsp;<span id="output"></span>
+        <img src="" id="imageresult" alt="">
+    </body>
+    <script>
+    $(document).ready(function(){
+        $("#btnsave").on("click",function(){
+            console.log("Output",$("#output").html())
+            $('#imageresult').attr("src",$("#output").html())
+            $("#output").html($("#keterangan").val())
+        });
+
+    })
+    </script>
+
+</html>
